@@ -25,11 +25,11 @@ import { getSession } from "~/sessions.server.js";
 export async function loader({ request }) {
   const session = await getSession(request.headers.get("Cookie"));
   userId = session.get("userId")
-  const db = connectDb();
+   const db = connectDb();
   const username = await db.models.User.findOne({_id : userId});
   const newuserName = username.username ;
-  console.log(newuserName);
-  return (newuserName);
+/*   console.log(newuserName);
+ */  return (newuserName);
 }
 
 
