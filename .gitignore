@@ -1,0 +1,11 @@
+node_modules
+
+/.cache
+/build
+/public/build
+.env
+/app/tailwind.css
+/test-results/
+/playwright-report/
+/playwright/.cache/
+.DS_Store

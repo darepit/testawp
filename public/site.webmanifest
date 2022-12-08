@@ -1,0 +1,15 @@
+{
+    "name": "Golden Tooth Nav",
+    "short_name": "Golden Tooth Nav",
+    "icons": [
+        {
+            "src": "/android-chrome-144x144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#F1F5F9",
+    "background_color": "#F1F5F9",
+    "display": "standalone",
+    "start_url": "/"
+}
