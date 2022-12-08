@@ -36,12 +36,20 @@ import { getSession } from "~/sessions.server.js";
   return (newuserName);
 } */
 
+export async function loader({ request }) {
+  const session = await getSession(request.headers.get("Cookie"));
+  userId = session.get("userId")
+   const db = connectDb();
+  const username = await db.models.User.findOne({_id : userId});
+  const newuserName = username.username ;
+  return (newuserName);
+}
+
 export async function action({ request }) {
   const formData = await request.formData();
   const data = {
     author: formData.get("username"),
     content: formData.get("name"),
-  
   };
   const db = connectDb();
   try {
